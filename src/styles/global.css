@@ -1,0 +1,156 @@
+/* src/styles/global.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glitch-effect {
+  position: relative;
+  color: #f1f3f7; /* Text color - adjust as needed */
+  text-decoration: none;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+  content: attr(data-text); /* Grabs the text from a data-attribute */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Match your site's background */
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch-effect::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1; /* Glitch color 1 (Magenta) */
+}
+
+.glitch-effect::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9; /* Glitch color 2 (Cyan) */
+}
+
+/* The hover animation */
+.glitch-effect:hover::before {
+  animation: glitch-anim-1 0.6s infinite linear alternate-reverse;
+}
+
+.glitch-effect:hover::after {
+  animation: glitch-anim-2 0.6s infinite linear alternate-reverse;
+}
+
+
+/* Keyframe animations for the glitch */
+@keyframes glitch-anim-1 {
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  5% { clip: rect(12px, 9999px, 60px, 0); }
+  10% { clip: rect(40px, 9999px, 44px, 0); }
+  15% { clip: rect(33px, 9999px, 16px, 0); }
+  20% { clip: rect(5px, 9999px, 49px, 0); }
+  25% { clip: rect(23px, 9999px, 55px, 0); }
+  30% { clip: rect(1px, 9999px, 33px, 0); }
+  35% { clip: rect(45px, 9999px, 23px, 0); }
+  40% { clip: rect(18px, 9999px, 40px, 0); }
+  45% { clip: rect(58px, 9999px, 20px, 0); }
+  50% { clip: rect(38px, 9999px, 52px, 0); }
+  55% { clip: rect(56px, 9999px, 60px, 0); }
+  60% { clip: rect(2px, 9999px, 15px, 0); }
+  65% { clip: rect(29px, 9999px, 51px, 0); }
+  70% { clip: rect(54px, 9999px, 33px, 0); }
+  75% { clip: rect(10px, 9999px, 45px, 0); }
+  80% { clip: rect(42px, 9999px, 19px, 0); }
+  85% { clip: rect(59px, 9999px, 43px, 0); }
+  90% { clip: rect(3px, 9999px, 29px, 0); }
+  95% { clip: rect(26px, 9999px, 50px, 0); }
+  100% { clip: rect(4px, 9999px, 46px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(35px, 9999px, 56px, 0); }
+  100% { clip: rect(40px, 9999px, 10px, 0); }
+}
+
+/* Add to src/styles/global.css */
+.caret-cursor-active {
+  cursor: none;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-caret {
+  animation: blink 1s step-end infinite;
+}
+.data-corruption-effect {
+  position: relative;
+}
+
+.data-corruption-effect::before,
+.data-corruption-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 10;
+  pointer-events: none;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
+}
+
+.data-corruption-effect .loader-box::before,
+.data-corruption-effect .loader-box::after {
+    content: 'Portfolio Ready.';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #0f0;
+    background: rgba(0, 24, 0, 0.5);
+    padding: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 5px #0f0;
+}
+
+
+.data-corruption-effect::before {
+  animation: glitch-tear-1 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+.data-corruption-effect::after {
+  animation: glitch-tear-2 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+@keyframes glitch-tear-1 {
+  0% { clip-path: inset(30% 0 60% 0); transform: translateX(-10px); }
+  10% { clip-path: inset(90% 0 5% 0); }
+  20% { clip-path: inset(50% 0 45% 0); transform: translateX(10px); }
+  30% { clip-path: inset(25% 0 70% 0); }
+  40% { clip-path: inset(80% 0 10% 0); transform: translateX(-10px); }
+  50% { clip-path: inset(40% 0 58% 0); }
+  60% { clip-path: inset(15% 0 80% 0); transform: translateX(5px); }
+  70% { clip-path: inset(95% 0 2% 0); }
+  80% { clip-path: inset(60% 0 35% 0); transform: translateX(-5px); }
+  90% { clip-path: inset(20% 0 75% 0); }
+  100% { clip-path: inset(70% 0 25% 0); }
+}
+
+@keyframes glitch-tear-2 {
+  0% { clip-path: inset(75% 0 10% 0); transform: translateX(10px); }
+  10% { clip-path: inset(10% 0 88% 0); }
+  20% { clip-path: inset(60% 0 30% 0); transform: translateX(-10px); }
+  30% { clip-path: inset(80% 0 5% 0); }
+  40% { clip-path: inset(25% 0 70% 0); transform: translateX(10px); }
+  50% { clip-path: inset(90% 0 8% 0); }
+  60% { clip-path: inset(40% 0 55% 0); transform: translateX(-5px); }
+  70% { clip-path: inset(5% 0 92% 0); }
+  80% { clip-path: inset(85% 0 5% 0); transform: translateX(5px); }
+  90% { clip-path: inset(35% 0 60% 0); }
+  100% { clip-path: inset(70% 0 15% 0); }
+}
