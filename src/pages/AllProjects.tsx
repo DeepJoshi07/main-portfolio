@@ -13,7 +13,7 @@ const projectsData = [
     title: "Chat app",
     subtitle: "Real-Time Collaborative Coding Platform",
     description:
-      "Built for developers who need to code together seamlessly, HiveMind supports shared rooms, live editing with collaborative cursors, instant code execution, and AI-powered debugging. Designed with WebSockets for millisecond-level sync and an optimized backend for stable multi-user sessions.",
+     "I've developed a real-time web application using the MERN stack (MongoDB, Express.js, React.js, Node.js), enhanced by Socket.IO for bi-directional communication and Zustand for lean, scalable state management in React.",
     techStack: [
       "React.js",
       "Node.js",
@@ -31,7 +31,7 @@ const projectsData = [
     title: "Fashion E-commerce App",
     subtitle: "AI-Powered Mental Fitness Web App",
     description:
-      "A mobile-first mental wellness platform that delivers 5-minute daily routines for focus, emotional clarity, and resilience. Features journaling, breathing exercises, mood tracking, and a personal AI coach. Built with performance-first principles to ensure fast load times and smooth interactions on any device.",
+      "I’ve built a stylish and responsive fashion e-commerce platform using React.js, with smooth state management powered by Context API. The app features seamless payment integration via Stripe and Razorpay, giving customers flexible options during checkout.",
     techStack: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "AI API"],
     liveLink: "https://fashion-frontend-six.vercel.app/",
     githubLink:
@@ -42,7 +42,7 @@ const projectsData = [
     title: "Social media App",
     subtitle: "My Custom-Designed Developer Portfolio",
     description:
-      "A handcrafted, performance-optimized site that showcases my work, skills, and workflow. Built from scratch with pixel-perfect UI implementation and strong attention to accessibility and responsive design.",
+      "I've built a powerful full-stack application using Next.js, with Prisma as your ORM to efficiently connect and manage your database. The app also features image upload to the cloud, allowing users to add media seamlessly and store it securely. (In Progress...)",
     techStack: ["React.js", "Tailwind CSS", "Vite", "TypeScript"],
     liveLink: "https://social-app-rosy-sigma.vercel.app/",
     githubLink:
